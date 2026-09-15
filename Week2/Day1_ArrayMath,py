@@ -1,0 +1,19 @@
+import numpy as np
+
+array1 = np.array([10, 20, 30, 40])
+array2 = np.array([2, 4, 5, 8])
+
+print("Array 1:", array1)
+print("Array 2:", array2)
+
+print("\nAddition:")
+print(array1 + array2)
+
+print("\nSubtraction:")
+print(array1 - array2)
+
+print("\nMultiplication:")
+print(array1 * array2)
+
+print("\nDivision:")
+print(array1 / array2)
