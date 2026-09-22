@@ -1,0 +1,21 @@
+During Week 2, I learned:
+
+- Creating 1D and 2D NumPy arrays
+- Array shape, size, and dimensions
+- Indexing and slicing
+- NumPy mathematical operations
+- Reshaping and flattening arrays
+- Generating random values
+- Mean, median, and standard deviation
+- Matrix operations
+- Creating pandas Series
+- Creating DataFrames
+- Reading and writing CSV files
+- Selecting and filtering data
+- Handling missing values
+- Renaming and sorting columns
+- Creating calculated columns
+- Grouping data with groupby()
+- Cleaning and analyzing small datasets
+
+These exercises helped me understand how NumPy and pandas can be used to organize, clean, manipulate, and analyze data.
