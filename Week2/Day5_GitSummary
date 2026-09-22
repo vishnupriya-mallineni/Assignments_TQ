@@ -1,0 +1,41 @@
+# Week 2 - NumPy and Pandas
+
+## Overview
+
+During Week 2, I practiced NumPy and pandas for working with arrays, numerical calculations, datasets, data cleaning, and basic data analysis.
+
+## NumPy Concepts Learned
+
+- Creating 1D and 2D arrays
+- Checking shape, size, and dimensions
+- Array indexing and slicing
+- Addition, subtraction, multiplication, and division
+- Reshaping and flattening arrays
+- Generating random integers and floats
+- Mean, median, and standard deviation
+- Matrix addition and multiplication
+
+## Pandas Concepts Learned
+
+- Creating pandas Series
+- Indexing and filtering Series
+- Creating DataFrames from dictionaries and lists
+- Reading and writing CSV files
+- Using head(), tail(), info(), and describe()
+- Selecting single and multiple columns
+- Filtering rows using conditions
+- Identifying missing values
+- Filling and dropping missing values
+- Renaming columns
+- Sorting records
+- Creating calculated columns
+- Using groupby() for counts and averages
+- Cleaning and analyzing a small dataset
+
+## Git Commands Used
+
+```bash
+git status
+git add .
+git commit -m "Complete Week 2 NumPy and pandas exercises"
+git push
