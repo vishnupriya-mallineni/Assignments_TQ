@@ -1,0 +1,68 @@
+# Mini EDA Project
+
+## Objective
+
+The objective of this project is to perform exploratory data analysis on a student dataset using Python, pandas, Matplotlib, and Seaborn.
+
+The analysis focuses on student age, department, marks, and attendance to identify patterns and relationships in the data.
+
+## Dataset
+
+The dataset contains the following columns:
+
+- Name
+- Department
+- Age
+- Marks
+- Attendance
+
+## Data Cleaning Steps
+
+The following checks were performed:
+
+1. Loaded the CSV dataset using pandas.
+2. Inspected the first few rows using `head()`.
+3. Checked column names and data types using `info()`.
+4. Checked for missing values using `isnull().sum()`.
+5. Checked for duplicate rows using `duplicated()`.
+6. Reviewed numerical values using `describe()`.
+
+## Exploratory Data Analysis
+
+The following analyses were performed:
+
+- Calculated average, highest, and lowest marks.
+- Calculated average marks by department.
+- Counted students in each department.
+- Examined the distribution of marks.
+- Analyzed the relationship between attendance and marks.
+- Calculated correlations between numerical columns.
+
+## Charts
+
+The project includes the following visualizations:
+
+1. Bar chart showing the number of students in each department.
+2. Histogram showing the distribution of student marks.
+3. Scatter plot showing the relationship between attendance and marks.
+4. Correlation heatmap for age, marks, and attendance.
+5. Bar chart comparing average marks by department.
+
+## Key Findings
+
+1. Sales has the highest average marks in the sample dataset.
+2. Student marks range from 68 to 94.
+3. Higher attendance generally corresponds with higher marks in this sample.
+4. IT and HR each have three students, while Sales has two students.
+5. The correlation analysis helps identify relationships between age, marks, and attendance.
+
+## Tools Used
+
+- Python
+- pandas
+- Matplotlib
+- Seaborn
+
+## Conclusion
+
+This project demonstrates a basic exploratory data analysis workflow using a CSV dataset. The data was inspected and analyzed using descriptive statistics and visualizations. The analysis helped identify patterns in student performance, attendance, and department-level results.
