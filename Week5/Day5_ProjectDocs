@@ -1,0 +1,104 @@
+# Student Performance Prediction – Mini ML Project
+
+## 1. Problem Statement
+
+The objective of this project is to predict whether a student will **Pass (1)** or **Fail (0)** based on study hours, attendance percentage, and previous examination marks.
+
+This is a **binary classification problem**. Two machine learning models are trained and evaluated to determine which performs better on the sample dataset.
+
+## 2. Dataset Summary
+
+The project uses a sample dataset containing **24 student records**.
+
+| Column | Description |
+|---|---|
+| Hours_Studied | Number of hours a student studied |
+| Attendance | Student attendance percentage |
+| Previous_Marks | Marks obtained in a previous examination |
+| Pass | Target variable: 1 = Pass, 0 = Fail |
+
+**Features:** Hours_Studied, Attendance, Previous_Marks
+
+**Target:** Pass
+
+The dataset is stored in `student_performance.csv`.
+
+## 3. Data Preprocessing
+
+The following preprocessing steps were performed:
+
+1. Loaded the student data into a pandas DataFrame.
+2. Checked the dataset for missing values.
+3. Separated the independent features (`X`) and target variable (`y`).
+4. Split the dataset into **75% training data and 25% testing data** using `train_test_split`.
+5. Used `stratify=y` to preserve the class proportions in the training and testing sets.
+6. Applied `StandardScaler` to standardize features for Logistic Regression. The scaler was fitted only on the training data.
+7. Used the original numerical features for Random Forest, which does not require feature scaling.
+
+## 4. Machine Learning Models Used
+
+### Logistic Regression
+
+Logistic Regression is a classification algorithm used to predict the probability of a binary outcome.
+
+It was trained using scaled features.
+
+### Random Forest Classifier
+
+Random Forest combines multiple decision trees to generate predictions.
+
+The model was configured with **100 decision trees** and `random_state=42` for reproducibility.
+
+Both models were evaluated using the same test dataset.
+
+## 5. Model Evaluation Metrics
+
+The models were compared using four classification metrics.
+
+| Metric | Description |
+|---|---|
+| Accuracy | Percentage of predictions that are correct |
+| Precision | Proportion of predicted passes that are actual passes |
+| Recall | Proportion of actual passes correctly identified |
+| F1-score | Harmonic mean of precision and recall |
+
+### Model Comparison Results
+
+Fill in the following table using the results printed by `student_performance.py`.
+
+| Model | Accuracy | Precision | Recall | F1-score |
+|---|---|---|---|---|
+| Logistic Regression | To be filled | To be filled | To be filled | To be filled |
+| Random Forest | To be filled | To be filled | To be filled | To be filled |
+
+**Best Model:** To be filled after running the program.
+
+The best model is selected using the highest **F1-score**, with accuracy used as a tiebreaker.
+
+The comparison results are saved in `model_comparison.csv`.
+
+## 6. Conclusion
+
+This project demonstrates a complete basic machine learning workflow, including dataset preparation, feature selection, train-test splitting, model training, prediction, and evaluation.
+
+Logistic Regression and Random Forest were compared using accuracy, precision, recall, and F1-score.
+
+The final model selection depends on the evaluation scores obtained after running the program.
+
+Because the dataset contains only 24 artificially created records, the results are suitable for learning and demonstration rather than real-world student assessment.
+
+## 7. Tools and Libraries
+
+- Python
+- pandas
+- scikit-learn
+- Logistic Regression
+- Random Forest Classifier
+- StandardScaler
+
+## 8. Project Files
+
+- `student_performance.py` – Main machine learning program
+- `student_performance.csv` – Student dataset
+- `model_comparison.csv` – Model evaluation results
+- `README.md` – Project documentation
