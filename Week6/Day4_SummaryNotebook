@@ -1,0 +1,238 @@
+# Unsupervised Learning – Documentation
+
+**Week:** 6  
+**Topic:** Unsupervised Learning  
+**Project:** Student Data Clustering and Outlier Detection
+
+## 1. Introduction
+
+Unsupervised learning is a type of machine learning that identifies patterns and relationships in data without using predefined target labels.
+
+Unlike supervised learning, where a model learns from labeled examples, unsupervised learning discovers similarities, groups, and unusual observations independently.
+
+This project focuses on clustering and outlier detection using small numerical datasets.
+
+## 2. Objectives
+
+The main objectives of this project are:
+
+- Understand the fundamentals of unsupervised learning.
+- Apply K-Means clustering to numerical data.
+- Visualize clusters using scatter plots.
+- Identify a suitable number of clusters using the Elbow Method.
+- Analyze and interpret cluster groups.
+- Understand the importance of feature scaling.
+- Detect unusual observations using IQR and distance-based methods.
+- Compare datasets before and after outlier treatment.
+
+## 3. Dataset Description
+
+A small student dataset was used to demonstrate clustering.
+
+The dataset contains two numerical features:
+
+| Feature | Description |
+|---|---|
+| Hours_Studied | Number of hours spent studying |
+| Marks | Marks obtained by a student |
+
+These features help identify students with similar study patterns and academic performance.
+
+Separate sample data containing unusually high values was used for outlier detection.
+
+## 4. K-Means Clustering
+
+K-Means is an unsupervised machine learning algorithm that divides observations into a specified number of clusters.
+
+The algorithm groups similar observations by minimizing the distance between data points and their cluster centers.
+
+### Implementation
+
+The student dataset was divided into three clusters using K-Means.
+
+The model assigned a cluster label to each student based on study hours and marks.
+
+### Observations
+
+The resulting clusters represented students with relatively lower, moderate, and higher study hours and marks.
+
+Cluster numbers are arbitrary and do not represent a predefined performance ranking.
+
+## 5. Cluster Visualization
+
+Scatter plots were used to visualize the clustering results.
+
+- The X-axis represented hours studied.
+- The Y-axis represented marks.
+- Different colors represented different clusters.
+- Cluster centers were highlighted using X-shaped markers.
+
+### Result
+
+The scatter plot helped identify similarities between students and visually distinguish the groups formed by K-Means.
+
+## 6. Elbow Method
+
+The Elbow Method helps determine a suitable number of clusters.
+
+Different values of K, from 1 to 10, were tested, and the inertia was calculated for each value.
+
+Inertia measures the sum of squared distances between observations and their assigned cluster centers.
+
+### Observation
+
+As K increases, inertia decreases. The point where the decrease begins to slow is considered a possible elbow.
+
+Three clusters were used as a practical choice for the student grouping exercise, although the best value should be selected by inspecting the actual elbow plot.
+
+## 7. Cluster Analysis
+
+After clustering, cluster labels were added to the dataset.
+
+Each group was analyzed using:
+
+- Number of students
+- Average study hours
+- Average marks
+- Minimum and maximum marks
+
+### Result
+
+Cluster analysis helped describe the characteristics of each group and compare student study patterns.
+
+The groups were interpreted as lower, medium, and higher performance based on their average marks.
+
+## 8. Feature Scaling
+
+Feature scaling transforms numerical features to comparable scales.
+
+The StandardScaler technique was used to standardize study hours and marks.
+
+### Before Scaling
+
+Marks had a larger numerical range than study hours, meaning they could have a greater influence on distance calculations.
+
+### After Scaling
+
+Both features contributed on more comparable scales.
+
+### Result
+
+Comparing cluster assignments before and after scaling demonstrated why preprocessing is important for distance-based algorithms.
+
+Scaling does not always produce better clusters, but it reduces the influence of differences in measurement units.
+
+## 9. Clustering on a Real-World Dataset
+
+K-Means was also applied to the Iris dataset available in scikit-learn.
+
+The dataset contains measurements of 150 flowers.
+
+Petal length and petal width were selected as clustering features.
+
+### Implementation
+
+The features were standardized, and K-Means was applied with three clusters.
+
+Cluster assignments, average feature values, and a scatter plot were used to analyze the results.
+
+### Result
+
+The algorithm grouped flowers according to similarities in their petal measurements without using the known species labels during clustering.
+
+## 10. Outlier Detection Using IQR
+
+Outliers are observations that differ significantly from the majority of the dataset.
+
+The Interquartile Range (IQR) method was used to identify unusually high or low values.
+
+The IQR is calculated as:
+
+**IQR = Q3 − Q1**
+
+The outlier boundaries are:
+
+- Lower Bound = Q1 − 1.5 × IQR
+- Upper Bound = Q3 + 1.5 × IQR
+
+### Observation
+
+In the sample student dataset, an observation containing 20 study hours and 99 marks was unusually high compared with the remaining observations.
+
+The IQR method identified it as a potential outlier.
+
+## 11. Distance-Based Outlier Detection
+
+Distance-based outlier detection identifies observations located far from the main group of data points.
+
+Euclidean distance was used to calculate the distance between each observation and the median center of the standardized dataset.
+
+A threshold based on the IQR of the distances was used to identify unusual observations.
+
+### Result
+
+The unusually distant student observation was identified as a potential outlier.
+
+This method is useful for detecting observations that differ across multiple numerical features.
+
+## 12. Outlier Treatment
+
+Two outlier treatment techniques were explored.
+
+### Outlier Removal
+
+Outlier removal deletes observations identified as unusual.
+
+This reduces the number of records and can change summary statistics.
+
+### Outlier Capping
+
+Outlier capping replaces extreme values with defined lower or upper boundaries.
+
+This preserves the number of observations while limiting the influence of extreme values.
+
+### Comparison
+
+| Method | Description |
+|---|---|
+| Original Data | Keeps all observations |
+| Outlier Removal | Deletes observations containing outliers |
+| Outlier Capping | Limits extreme values to specified boundaries |
+
+### Result
+
+Both removal and capping reduced the influence of the unusually high observation on average study hours and marks.
+
+The appropriate treatment depends on the dataset and whether the outlier represents a valid observation or a data error.
+
+## 13. Tools and Libraries Used
+
+- **Python:** Programming language
+- **Pandas:** Dataset creation and analysis
+- **NumPy:** Numerical calculations
+- **Matplotlib:** Data visualization
+- **Scikit-learn:** K-Means clustering, feature scaling, and evaluation
+
+## 14. Key Learnings
+
+Through this project, the following concepts were practiced:
+
+1. Understanding unsupervised learning and clustering.
+2. Applying K-Means to numerical datasets.
+3. Visualizing and interpreting cluster assignments.
+4. Using the Elbow Method to select K.
+5. Understanding the effect of feature scaling.
+6. Applying clustering to the Iris dataset.
+7. Detecting outliers using IQR and Euclidean distance.
+8. Removing and capping unusual observations.
+9. Comparing statistical results before and after data cleaning.
+
+## 15. Conclusion
+
+This project provided practical experience with unsupervised machine learning techniques.
+
+K-Means clustering was used to identify groups of similar observations, while feature scaling and the Elbow Method supported the clustering process.
+
+IQR and distance-based methods were used to identify unusual observations, and different outlier treatment techniques were compared.
+
+Overall, the exercises demonstrated how unsupervised learning can be used to explore datasets, discover patterns, and support data preprocessing before further machine learning analysis.
